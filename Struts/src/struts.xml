@@ -3,9 +3,9 @@
 <struts>
 	<constant name="struts.devMode" value="true"></constant>
 	<package name="default" namespace="/" extends="struts-default">
-		<action name="hello">
-			<result>
-				/Hello.jsp
+		<action name="hello" class="com.action.Action1">
+			<result name="success">
+				/ActionSuccess.jsp
 			</result>
 		</action>
 	</package>
