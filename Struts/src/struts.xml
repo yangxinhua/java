@@ -8,5 +8,15 @@
 				/ActionSuccess.jsp
 			</result>
 		</action>
+		<action name="userAdd" class="com.action.UserAction">
+			<result name="success">
+				/UserActionSuccess.jsp
+			</result>
+		</action>
+		<action name="*_*" class="com.action.{1}Action" method="{2}">
+			<result name="success">
+				/html/{1}_{2}_success.jsp
+			</result>
+		</action>
 	</package>
 </struts>    
