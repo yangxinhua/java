@@ -2,6 +2,7 @@
 <!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
 <struts>
 	<constant name="struts.devMode" value="true"></constant>
+	<constant name="struts.i18n.encoding" value="GBK"></constant>
 	<package name="default" namespace="/" extends="struts-default">
 		<action name="hello" class="com.action.Action1">
 			<result name="success">
@@ -29,6 +30,11 @@
 		<action name="userModleDrivenAdd" class="com.action.UserModelDrivenAction">
 			<result name="success">
 				/html/actionParam.jsp
+			</result>
+		</action>
+		<action name="login" class="com.action.AccessWebElementsAction">
+			<result name="success">
+				/html/login_success.jsp
 			</result>
 		</action>
 		<action name="*_*" class="com.action.{1}Action" method="{2}">

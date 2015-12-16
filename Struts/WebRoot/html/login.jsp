@@ -2,7 +2,6 @@
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
-String context = request.getContextPath();
 %>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
@@ -10,7 +9,7 @@ String context = request.getContextPath();
   <head>
     <base href="<%=basePath%>">
     
-    <title>My JSP 'index.jsp' starting page</title>
+    <title>My JSP 'login.jsp' starting page</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -23,13 +22,12 @@ String context = request.getContextPath();
 
   </head>
   
-<body>
-<a href="<%=context %>/Student_add">添加学生</a>
-<a href="<%=context %>/Student_del">删除学生</a>
-<a href="<%=context %>/Teacher_add">添加老师</a>
-<a href="<%=context %>/Teacher_del">删除老师</a>
-<br>
-<a href="<%=context %>/userVaild!add?name=a">校验失败</a>
-<a href="<%=context %>/userVaild!add?name=admin">校验成功</a>
-</body>
+  <body>
+    
+<form name="loginform" action="" method="post">
+用户名：<input type="text" name="name"><br>
+密码：<input type="password" name="password"><br>
+<input type="button" value="提交" onclick="javascript:document.loginform.action='login';document.loginform.submit();">
+</form>
+  </body>
 </html>
