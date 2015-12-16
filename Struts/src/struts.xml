@@ -5,12 +5,22 @@
 	<package name="default" namespace="/" extends="struts-default">
 		<action name="hello" class="com.action.Action1">
 			<result name="success">
-				/ActionSuccess.jsp
+				/html/ActionSuccess.jsp
 			</result>
 		</action>
 		<action name="userAdd" class="com.action.UserAction">
 			<result name="success">
-				/UserActionSuccess.jsp
+				/html/actionParam.jsp
+			</result>
+		</action>
+		<action name="userModleAdd" class="com.action.UserDomainModelAction">
+			<result name="success">
+				/html/actionParam.jsp
+			</result>
+		</action>
+		<action name="userModleDrivenAdd" class="com.action.UserModelDrivenAction">
+			<result name="success">
+				/html/actionParam.jsp
 			</result>
 		</action>
 		<action name="*_*" class="com.action.{1}Action" method="{2}">
