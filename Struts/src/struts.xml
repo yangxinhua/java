@@ -8,6 +8,14 @@
 				/html/ActionSuccess.jsp
 			</result>
 		</action>
+		<action name="userVaild" class="com.action.UserSimpleValidAction">
+			<result name="success">
+				/html/vaildSuccess.jsp
+			</result>
+			<result name="error">
+				/html/vaildError.jsp
+			</result>
+		</action>
 		<action name="userAdd" class="com.action.UserAction">
 			<result name="success">
 				/html/actionParam.jsp

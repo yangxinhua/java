@@ -1,8 +1,8 @@
 <%@ page language="java" import="java.util.*" pageEncoding="GB18030"%>
+<%@ taglib uri="/struts-tags" prefix="s" %>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
-String context = request.getContextPath();
 %>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
@@ -10,7 +10,7 @@ String context = request.getContextPath();
   <head>
     <base href="<%=basePath%>">
     
-    <title>My JSP 'index.jsp' starting page</title>
+    <title>My JSP 'vaildError.jsp' starting page</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -23,13 +23,11 @@ String context = request.getContextPath();
 
   </head>
   
-<body>
-<a href="<%=context %>/Student_add">添加学生</a>
-<a href="<%=context %>/Student_del">删除学生</a>
-<a href="<%=context %>/Teacher_add">添加老师</a>
-<a href="<%=context %>/Teacher_del">删除老师</a>
-<br>
-<a href="<%=context %>/userVaild!add?name=a">校验成功</a>
-<a href="<%=context %>/userVaild!add?name=admin">校验失败</a>
-</body>
+  <body>
+    vaildError. <br>
+    <s:fielderror fieldName="name"></s:fielderror>
+    <br>
+    <s:property value="errors.name[0]"/>
+    <s:debug></s:debug>
+  </body>
 </html>
