@@ -4,7 +4,7 @@ String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 String context = request.getContextPath();
 %>
-
+<%@taglib uri="/struts-tags" prefix="s"%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
@@ -31,5 +31,14 @@ String context = request.getContextPath();
 <br>
 <a href="<%=context %>/userVaild!add?name=a">校验失败</a>
 <a href="<%=context %>/userVaild!add?name=admin">校验成功</a>
+<br>
+<a href="useraction?type=1">全局result成功</a>
+<a href="useraction?type=2">全局result失败</a>
+<a href="useraction?type=3">默认mainpage</a>
+<a href="useradminaction">包继承</a>
+<br>
+<a href="dynamicactionresult?type=1">动态结果成功</a>
+<a href="dynamicactionresult?type=2">动态结果失败</a>
+<s:debug></s:debug>
 </body>
 </html>

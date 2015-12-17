@@ -44,6 +44,16 @@
 		</action>
 	</package>
 	<package name="resultTypes" namespace="/" extends="struts-default">
+	
+		<global-results>
+		<result name="mainpage">/html/mainpage.jsp</result>
+		</global-results>
+		
+		<action name="useraction" class="com.action.UserGlobalResultAction">
+			<result name="success">/html/UserActionSuccess.jsp</result>
+			<result name="error">/html/UserActionError.jsp</result>
+		</action>
+		
 		<action name="r1">
 			<result type="dispatcher">/html/r1.jsp</result>
 		</action>
@@ -55,6 +65,17 @@
 		</action>
 		<action name="r4">
 			<result type="redirectAction">r2</result>
+		</action>
+		<action name="dynamicactionresult" class="com.action.UserDynamicResultAction">
+			<result name="success">
+				${r}
+			</result>
+		</action>
+	</package>
+	
+	<package name="admin" namespace="/" extends="resultTypes">
+		<action name="useradminaction" class="com.action.UserAdminAction">
+		<result>/html/login.jsp</result>
 		</action>
 	</package>
 </struts>    
