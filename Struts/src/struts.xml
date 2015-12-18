@@ -71,6 +71,11 @@
 				${r}
 			</result>
 		</action>
+		<action name="resultparam" class="com.action.UserResultParamAction">
+			<result name="success" type="redirect">
+				/html/user_param_result.jsp?t=${type}
+			</result>
+		</action>
 	</package>
 	
 	<package name="admin" namespace="/" extends="resultTypes">

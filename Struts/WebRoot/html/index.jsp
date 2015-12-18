@@ -39,6 +39,8 @@ String context = request.getContextPath();
 <br>
 <a href="dynamicactionresult?type=1">动态结果成功</a>
 <a href="dynamicactionresult?type=2">动态结果失败</a>
+<br>
+<a href="resultparam?type=1">向结果传参数</a>
 <s:debug></s:debug>
 </body>
 </html>
