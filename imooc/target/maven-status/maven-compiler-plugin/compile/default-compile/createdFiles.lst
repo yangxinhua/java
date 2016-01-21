@@ -1,0 +1,16 @@
+net\hoyoung\imooc\downloader\download\DownloadScheduler$1.class
+net\hoyoung\imooc\downloader\ImoocDownloader$VideoItemPageProcessor.class
+net\hoyoung\imooc\downloader\model\DownloadInfo.class
+net\hoyoung\imooc\downloader\model\DownloadTask.class
+net\hoyoung\imooc\downloader\download\DownloadLimiter.class
+net\hoyoung\imooc\downloader\download\BandwidthLimiter.class
+net\hoyoung\imooc\downloader\model\VideoItem.class
+net\hoyoung\imooc\downloader\ImoocDownloader.class
+us\codecraft\webmagic\hoyoung\Spider$1.class
+net\hoyoung\imooc\downloader\ImoocDownloader$VideoItemFileUrlPageProcessor.class
+us\codecraft\webmagic\hoyoung\Spider$Status.class
+net\hoyoung\imooc\downloader\download\SaveItemFile.class
+net\hoyoung\imooc\downloader\download\DownloadFile.class
+us\codecraft\webmagic\hoyoung\Spider.class
+net\hoyoung\imooc\downloader\download\DownloadScheduler.class
+net\hoyoung\imooc\downloader\download\BatchDownloadFile.class
