@@ -2,6 +2,7 @@ package com.annotation;
 
 import com.annotation.services.interfaces.IBeanMultiService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -16,6 +17,9 @@ public class BeanInvoker {
     private List<IBeanMultiService> list;
     @Autowired
     private Map<String,IBeanMultiService> map;
+    @Autowired
+    @Qualifier("beanMutilServiceImplTwo")
+    private IBeanMultiService ibs;
     public void say() {
         if (null!=list&&list.size()>0)
         {
@@ -36,6 +40,13 @@ public class BeanInvoker {
         }else
         {
             System.out.println("map is null");
+        }
+        if(null!=ibs)
+        {
+            System.out.println("class:"+ibs.getClass().getName());
+        }else
+        {
+            System.out.println("ibs is null");
         }
     }
 }
