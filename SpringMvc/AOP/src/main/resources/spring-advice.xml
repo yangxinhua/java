@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+       <bean id="aopaspectbean" class="com.advice.AopAspect"></bean>
+       <bean id="aspectbizbean" class="com.advice.biz.AspectBiz"></bean>
+
+       <aop:config>
+              <aop:aspect id="aspectAOP" ref="aopaspectbean">
+                <aop:pointcut id="bizpointcut" expression="execution(* com.advice.biz.AspectBiz.*(..))"/>
+                  <aop:before method="before" pointcut-ref="bizpointcut"/>
+                  <aop:after-returning method="afterReturning" pointcut-ref="bizpointcut"/>
+                  <aop:after-throwing method="afterThrowing" pointcut-ref="bizpointcut"/>
+                  <aop:after method="after" pointcut-ref="bizpointcut"/>
+                  <aop:around method="around" pointcut-ref="bizpointcut"/>
+
+                  <aop:around method="aroundinit" pointcut="execution(* com.advice.biz.AspectBiz.init(String,int)) and args(bizName,times)"/>
+              </aop:aspect>
+       </aop:config>
+</beans>

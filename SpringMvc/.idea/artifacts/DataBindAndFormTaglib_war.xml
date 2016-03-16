@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="DataBindAndFormTaglib:war">
+    <output-path>$PROJECT_DIR$/DataBindAndFormTaglib/target</output-path>
+    <root id="archive" name="DataBindAndFormTaglib.war">
+      <element id="artifact" artifact-name="DataBindAndFormTaglib:war exploded" />
+    </root>
+  </artifact>
+</component>
