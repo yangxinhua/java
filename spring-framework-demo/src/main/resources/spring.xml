@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+       <bean id="iocbean" class="com.ioc.bean.IocBean"></bean>
+
+
+       <!--构造依赖注入-->
+       <bean id="filmbeanbyconstructor" class="com.ioc.di.constructor.bean.FilmBean">
+              <constructor-arg type="java.lang.String" value="impossible mission"></constructor-arg>
+       </bean>
+       <bean id="viewerbeanbyconstructor" class="com.ioc.di.constructor.bean.ViewerBean">
+              <constructor-arg ref="filmbeanbyconstructor"></constructor-arg>
+       </bean>
+
+       <!--构造设置注入-->
+       <bean id="filmbeanbysetter" class="com.ioc.di.setter.bean.FilmBean">
+              <constructor-arg type="java.lang.String" value="impossible mission"></constructor-arg>
+       </bean>
+       <bean id="viewerbeanbysetter" class="com.ioc.di.setter.bean.ViewerBean">
+              <property name="filmBean" ref="filmbeanbysetter"></property>
+       </bean>
+
+       <!---->
+       <bean id="basicdatasourcebean" class="com.ioc.di.property.bean.BasicDataSource"
+               p:driverClassName="oracle.jdbc.driver.OracleDriver"
+               p:url="jdbc:oracle:thin:@10.10.149.186:1521:kfrpt1"
+               p:username="name"
+               p:password="pwd"></bean>
+
+</beans>
