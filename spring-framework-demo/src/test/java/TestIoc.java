@@ -1,3 +1,4 @@
+import com.aop.Foo;
 import com.ioc.bean.IocBean;
 import com.ioc.di.property.bean.BasicDataSource;
 import org.junit.Test;
@@ -38,5 +39,13 @@ public class TestIoc {
         ApplicationContext ac= new ClassPathXmlApplicationContext(new String[]{"classpath:spring.xml"});
         BasicDataSource basicDataSource=ac.getBean("basicdatasourcebean",  com.ioc.di.property.bean.BasicDataSource.class);
 
+    }
+
+    @Test
+    public  void testAOP()
+    {
+        ApplicationContext ac= new ClassPathXmlApplicationContext(new String[]{"classpath:spring.xml"});
+        Foo foo=ac.getBean("foo",  Foo.class);
+        foo.say();
     }
 }

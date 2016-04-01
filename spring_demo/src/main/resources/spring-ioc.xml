@@ -1,42 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
-        default-autowire="byName"
-        >
-    <!--<bean id="isyshelloworld" class="com.ioc.services.impl.SayHelloWorldImpl"></bean>-->
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation=" http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
-    <!--设置注入 -->
-    <!--<bean id="injectionServiceImplBySetting" class="InjectionServiceImpl">-->
-        <!--<property name="injectiondao" ref="injectionDaoImplBySetting"/>&lt;!&ndash;name 为InjectionServiceImpl内定义对象名称 &ndash;&gt;-->
-    <!--</bean>-->
-    <!--<bean id="injectionDaoImplBySetting" class="InjectionDaoImpl"></bean>-->
-
-    <!--构造注入 -->
-    <!--<bean id="injectionServiceImplByConstructor" class="InjectionServiceImpl">-->
-        <!--<constructor-arg name="injectiondao" ref="injectionDaoImplByConstructor"></constructor-arg>-->
-    <!--</bean>-->
-    <!--<bean id="injectionDaoImplByConstructor" class="InjectionDaoImpl"></bean>-->
-
-    <!--scope范围-->
-    <!--singleton模式-->
-    <!--<bean id="beanScopeSingleton" class="com.bean.BeanScope" scope="singleton"></bean>-->
-    <!--prototype模式-->
-    <!--<bean id="beanScopePrototype" class="com.bean.BeanScope" scope="prototype"></bean>-->
-
-    <!--bean生命周期-->
-    <!--<bean id="beanLifeCycle" class="com.bean.BeanLifeCycle" init-method="start" destroy-method="end"></bean>-->
-    <!--<bean id="beanLifeCycle" class="com.bean.BeanLifeCycle"></bean>-->
-
-    <!--aware-->
-    <!--<bean id="awareApplicationContext" class="com.aware.ApplicationContext"></bean>-->
-    <!--<bean id="awareBeanName" class="com.aware.BeanName"></bean>-->
-
-
-    <!--autowiring-->
-    <!--<bean id="beanAutoWiringServiceImpl" class="com.autowiring.services.impl.AutoWiringServiceImpl"></bean>-->
-    <!--<bean class="com.autowiring.dao.impl.AutoWiringDaoImpl"></bean>-->
-
-    <!--resources-->
-    <bean id="beanResourcesServiceImpl" class="com.resources.services.impl.ResourcesServiceImpl"></bean>
+    <context:annotation-config/>
+    <context:component-scan base-package="com"/>
 </beans>
+ 
+ 

@@ -11,7 +11,7 @@ public class TestInjectService extends UnitTestBase {
     {
         super("classpath*:spring-ioc.xml");
     }
-//    @Test
+//    @TestJson
 //    public void testInjectBySetting()
 //    {
 //        IInjectionService is=super.getBean("injectionServiceImplBySetting");
